@@ -16,8 +16,8 @@ export default function Products() {
     useEffect(() => {
         (() => {
             dispatch(getProduct())
-            console.log(productStateData);
-            console.log(Array.isArray(productStateData));
+            // console.log(productStateData);
+            // console.log(Array.isArray(productStateData));
             setData(productStateData.filter(x => x.status))
         })()
     }, [productStateData.length])

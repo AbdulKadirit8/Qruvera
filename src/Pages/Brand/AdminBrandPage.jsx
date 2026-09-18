@@ -77,8 +77,8 @@ export default function AdminBrandPage() {
                                                 return <tr key={item.id}>
                                                     <td className="align-middle">{item.id}</td>
                                                     <td className="align-middle">{item.name}</td>
-                                                    <td><Link to={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.image}`} target='_blank'>
-                                                        <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.image}`} width={80} alt="" />
+                                                    <td><Link to={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.pic}`} target='_blank'>
+                                                        <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.pic}`} width={80} alt="" />
                                                     </Link></td>
                                                     <td className="align-middle">{item.status ? "Active" : "Inactive"}</td>
                                                     <td className="text-center align-middle"><Link to={`/admin/brand/update/${item.id}`}><i className='bi bi-pencil btn btn-primary'></i></Link></td>

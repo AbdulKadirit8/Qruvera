@@ -12,14 +12,14 @@ export default function AdminSlider() {
                 <NavLink to="/" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-house-door '></i>
                     <div className='fs-10'> Home</div>
                 </NavLink>
                 <NavLink to="/admin/maincategory" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-grid '></i>
                     <div className='fs-10'>
                         Categories
@@ -28,7 +28,7 @@ export default function AdminSlider() {
                 <NavLink to="/admin/subcategory" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-diagram-3 '></i>
                     <div className='fs-10'>
                         SubCats
@@ -37,7 +37,7 @@ export default function AdminSlider() {
                 <NavLink to="/admin/brand" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-award '></i>
                     <div className='fs-10'>
                         Brand
@@ -46,7 +46,7 @@ export default function AdminSlider() {
                 <NavLink to="/admin/product" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-bag-check '></i>
                     <div className='fs-10'>
                         Product
@@ -55,7 +55,7 @@ export default function AdminSlider() {
                 <NavLink to="/admin/feature" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-stars '></i>
                     <div className='fs-10'>
                         Feature
@@ -64,7 +64,7 @@ export default function AdminSlider() {
                 <NavLink to="/admin/faq" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-question-circle '></i>
                     <div className='fs-10'>
                         FAQ
@@ -73,7 +73,7 @@ export default function AdminSlider() {
                 <NavLink to="/admin/newslatter" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-envelope '></i>
                     <div className='fs-10'>
                         Newslatter
@@ -82,7 +82,7 @@ export default function AdminSlider() {
                 <NavLink to="/admin/checkout" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-bag-check '></i>
                     <div className='fs-10'>
                         Checkout
@@ -91,7 +91,7 @@ export default function AdminSlider() {
                 <NavLink to="/admin/contactus" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-telephone '></i>
                     <div className='fs-10'>
                         Contact us
@@ -100,7 +100,7 @@ export default function AdminSlider() {
                 <NavLink to="/admin/user" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-person  '></i>
                     <div className='fs-10'>
                         User
@@ -109,7 +109,7 @@ export default function AdminSlider() {
                 <NavLink to="/admin/setting" className={({ isActive }) =>
                     `list-group-item text-center border-0 rounded-4 px-2 py-2
                     ${isActive ? 'mobile-active' : 'mobile-menu'}`
-                    } aria-current="true">
+                } aria-current="true">
                     <i className='fs-5 bi bi-gear '></i>
                     <div className='fs-10'>
                         Setting

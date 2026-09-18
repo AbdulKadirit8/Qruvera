@@ -17,7 +17,7 @@ const colors = ["Black", "White", "Red", "Blue", "Green", "Yellow", "Pink", "Pur
 var rteDescription
 
 export default function AdminUpdateProductPage() {
-const [sizeInput, setSizeInput] = useState("");
+    const [sizeInput, setSizeInput] = useState("");
     let { id } = useParams()
 
     var refdivDescription = useRef(null)
@@ -57,60 +57,15 @@ const [sizeInput, setSizeInput] = useState("");
     let brandStateData = useSelector(state => state.brandStateData)
     let dispatch = useDispatch()
 
-
-    // function getInputData(e) {
-    // let name = e.target.name
-
-    // // Demmy Backend
-    // let value = name === "pic" ? data.pic.concat(Array.from(e.target.files).map(x => "product/" + x.name)) : e.target.value
-
-
-    // // Rael Backend
-    // // let value = name === "pic" ? e.target.files.name : e.target.value
-
-    // setData({ ...data, [name]: name === "status" || name === "stock" ? (value === "1" ? true : false) : value })
-    // // setData({ ...data, [name]: name === "status" || name === "stock" ? (value === "1" ? true : false) : value })
-    // setErrorMessage({ ...errorMessage, [name]: name == "pic" ? PicValidater(e) : TextValidater(e) })
-    // }
-
     function getInputData(e) {
         let name = e.target.name
 
-        let value =
-            name === "pic"
-                ? data.pic.concat(
-                    Array.from(e.target.files).map(x => "product/" + x.name)
-                )
-                : e.target.value
+        let value = name === "pic" ? data.pic.concat(Array.from(e.target.files).map(x => "product/" + x.name)) : e.target.value
+        // Rael Backend
+        // let value = name === "pic" ? e.target.files.name : e.target.value
 
-        // if (name === "maincategory") {
-
-        //     setData({
-        //         ...data,
-        //         maincategory: value,
-        //         size: [],
-        //         volume: [],
-        //         weight: []
-        //     })
-        // }
-        // else {
-
-        //     setData({
-        //         ...data,
-        //         [name]:
-        //             name === "status" || name === "stock"
-        //                 ? (value === "1" ? true : false)
-        //                 : value
-        //     })
-        // }
         setData({ ...data, [name]: name === "status" || name === "stock" ? (value === "1" ? true : false) : value })
-
-        setErrorMessage({
-            ...errorMessage,
-            [name]: name === "pic"
-                ? PicValidater(e)
-                : TextValidater(e)
-        })
+        setErrorMessage({ ...errorMessage, [name]: name === "pic" ? PicValidater(e) : TextValidater(e) })
     }
 
     function getinputCheckbox(key, value) {
@@ -130,16 +85,6 @@ const [sizeInput, setSizeInput] = useState("");
                 : ''
         })
     }
-
-    // function getinputCheckbox(key, value) {
-    //     let arr = key === "color" ? data.color : data.size
-    //     if (arr.includes(value))
-    //         arr = arr.filter(x => x != value)
-    //     else
-    //         arr.push(value)
-    //     setData({ ...data, [key]: arr })
-    //     setErrorMessage({ ...errorMessage, [key]: arr.length === 0 ? `Please select atleast one ${key}` : '' })
-    // }
 
     function postData(e) {
         e.preventDefault()
@@ -223,17 +168,6 @@ const [sizeInput, setSizeInput] = useState("");
     useEffect(() => {
         (() => dispatch(getBrand()))()
     }, [brandStateData.length])
-
-
-
-    // const fieldType = getFieldType(data.maincategory)
-    // const filterArray =
-    //     fieldType === "volume"
-    //         ? volume
-    //         : fieldType === "weight"
-    //             ? weight
-    //             : size;
-
 
     return (
         <>
@@ -333,7 +267,7 @@ const [sizeInput, setSizeInput] = useState("");
                                             <label className='ps-2'>Size<span className='text-danger'>*</span></label>
                                             <div className="border border-primary rounded">
                                                 <div className="row p-2">
-                                                   <div className="col-12 mb-3">
+                                                    <div className="col-12 mb-3">
                                                         <label className='ps-2'>Measurement<span className='text-danger'>*</span></label>
                                                         <input
                                                             type="text"

@@ -14,7 +14,7 @@ import 'datatables.net-dt/css/dataTables.dataTables.min.css'
 
 
 export default function AdminMainCategoryPage() {
-   
+
     let [data, setData] = useState([])
     let subcategoryStateData = useSelector(state => state.subcategoryStateData)
     let dispatch = useDispatch()
@@ -71,14 +71,15 @@ export default function AdminMainCategoryPage() {
                                         </thead>
                                         <tbody>
                                             {data.map((item) => {
-                                                console.log(item);
                                                 return <tr key={item.id}>
-                                                    <td  className="align-middle">{item.id}</td>
-                                                    <td  className="align-middle">{item.name}</td>
-                                                    <td><Link to={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.image}`} target='_blank'>
-                                                        <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.image}`}  width={80} alt="" />
-                                                    </Link></td>
-                                                    <td  className="align-middle">{item.status ? "Active" : "Inactive"}</td>
+                                                    <td className="align-middle">{item.id}</td>
+                                                    <td className="align-middle">{item.name}</td>
+                                                    <td>
+                                                        <Link to={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.pic}`} target='_blank'>
+                                                            <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.pic}`} width={80} alt="" />
+                                                        </Link>
+                                                    </td>
+                                                    <td className="align-middle">{item.status ? "Active" : "Inactive"}</td>
                                                     <td className="text-center align-middle"><Link to={`/admin/subcategory/update/${item.id}`}><i className='bi bi-pencil btn btn-primary'></i></Link></td>
                                                     <td className="text-center align-middle"><button onClick={() => deleteRecord(item.id)} className='btn btn-danger'><i className='bi bi-trash'></i></button></td>
 
